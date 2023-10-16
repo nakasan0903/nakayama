@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プレミアリーグBIG6特集!!!</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
 <h1>プレミアリーグBIG6特集!!!</h1>
 <p>このサイトではプレミアリーグのBIG6と呼ばれるチームについての情報を提供します!!</p>
 
-<p> 
-    
-    <p style="text-align:light">
-        <img  src="data:image/png;base64,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" width="350" height="200">
+<div id="map" style="height: 250px; width: 60%;"></div>
+
 <h2>プレミアリーグとは？</h2>
-<p1>プレミアリーグとはイングランドの最上位に位置するリーグです!
-    1992年に設立され、そのレベルの高さから、世界中で非常に人気のあるリーグとなっています。
-</p1>
+<p>プレミアリーグとはイングランドの最上位に位置するリーグです! 1992年に設立され、そのレベルの高さから、世界中で非常に人気のあるリーグとなっています。</p>
 
 <h2>BIG6とは?</h2>
-<p1>BIG6とは下記の6クラブのことを指し、これらのクラブは、過去数シーズンにわたり
-    プレミアリーグでの競争が激しく、国際大会でもタイトルを獲得しているクラブです。
-</p1>
-       
-  <ul>
-      <li>マンチェスターシティ(Manchester City)</li>
-      <li>マンチェスターユナイテッド(Manchester United)</li>
-      <li>リヴァプール(Liverpool)</li>
-      <li>チェルシー(Chelsea)</li>
-      <li>アーセナル(Arsenal)</li>
-      <li>トッテナムホットスパー(Tottenham Hotspur)</li>
-      
-  </ul>
-  <p1>これら6チームの最新情報について随時発信していきます!
-    それぞれのチームについての情報は下のリンクから飛べます！
-  </p1>
-        
-        </p>
-</p>
+<p>BIG6とは下記の6クラブのことを指し、これらのクラブは、過去数シーズンにわたりプレミアリーグでの競争が激しく、国際大会でもタイトルを獲得しているクラブです。</p>
 
-<nav class="leftsidebar">
-    <ul>
-      <li><a rel="nofollow" class="external_text" href="../temple01/index.html">マンチェスターシティ</a></li>
-      <li><a rel="nofollow" class="external_text" href="../temple02/index.html">マンチェスターユナイテッド</a></li>
-      <li><a rel="nofollow" class="external_text" href="../temple03/index.html">リヴァプール</a></li>
-      <li><a rel="nofollow" class="external_text" href="../temple04/index.html">チェルシー</a></li>
-      <li><a rel="nofollow" class="external_text" href="../temple05/index.html">アーセナル</a></li>
-      <li><a rel="nofollow" class="external_text" href="../temple06/index.html">トッテナム</a></li>
-    </ul>
-    </nav>
+<ul>
+    <li>マンチェスターシティ(Manchester City)</li>
+    <li>マンチェスターユナイテッド(Manchester United)</li>
+    <li>リヴァプール(Liverpool)</li>
+    <li>チェルシー(Chelsea)</li>
+    <li>アーセナル(Arsenal)</li>
+    <li>トッテナムホットスパー(Tottenham Hotspur)</li>
+</ul>
+
+<p>これら6チームの最新情報について随時発信していきます! それぞれのチームについての情報は下の名前検索から飛べます！</p>
+
+<form id="teamForm">
+    <label for="teamName">Enter the team name:</label>
+    <input type="text" id="teamName" name="teamName">
+    <input type="submit" value="Go to team page">
+</form>
+
+<!-- External scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
