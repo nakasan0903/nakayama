@@ -15,6 +15,7 @@ erDiagram
     USER {
         string id PK "ユーザーID"
         string password "パスワード"
+        string email "メールアドレス"
         string username "ユーザーネーム"
     }
     TEAM {
