@@ -1,29 +1,67 @@
 <!DOCTYPE html>
-<html lang=“ja”>
-  <head>
-    <meta charset=“utf-8“ />
-    <meta name=“viewport” content=“width=device-width, initial-scale=1.0” />
-    <title>ログイン</title>
-  </head>
-  <body>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        {% for message in messages %}
-          <p>{{ message }}</p>
-        {% endfor %}
-      {% endif %}
-    {% endwith %}
-      <h1>ようこそ！</h1>
-      <form action=“/login” method=“post”>
-      <div>
-        <label for=“user”>ユーザー名</label>
-        <input type=“text” id=“user” name=“username”>
-      </div>
-      <div>
-        <label for=“pass”>パスワード</label>
-        <input type=“password” id=“pass” name=“password”>
-      </div>
-      <button type=“submit”>ログイン</button>
-    </form>
-  </body>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログインページ</title>
+    <style>
+        body {
+            font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
+            background: #f7f7f7;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+        .form-control label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-control input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-control button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #5cb85c;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-control button:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>ログイン</h2>
+        <form action="/login" method="post">
+            <div class="form-control">
+                <label for="username">ユーザー名</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-control">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-control">
+                <button type="submit">ログイン</button>
+            </div>
+        </form>
+    </div>
+
+</body>
 </html>
