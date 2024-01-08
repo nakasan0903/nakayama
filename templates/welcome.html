@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang=“ja”>
+<html lang="ja">
 <head>
-  <meta charset=“UTF-8“>
-  <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-  <title>Welcome</title>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
 </head>
 <body>
-  <h1>Welcomeページ</h1>
-  <h2>ようこそ！ {{ username }}さん</h2>
-  <p>このページはログインしないと表示されません</p>
-  <ul>
-    <li><a href="{{ url_for('contents') }}">コンテンツ</a></li>
-    <li><a href="{{ url_for('logout') }}">ログアウト</a></li>
-  </ul>
+    <h2>ようこそ！</h2>
+    <p>ログインに成功しました。</p>
+    <!-- index.htmlへのリンクを追加 -->
+    <a href="/index">ホームに戻る</a>
 </body>
 </html>

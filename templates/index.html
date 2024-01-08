@@ -1,50 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プレミアリーグBIG6特集!!!</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-    <script src="app.js" defer></script>
-</head>
-
 <body>
+    <body>
+        <div class="club-history">
+            <h1>アーセナルFC</h1>
+            <img src="https://www.otsuka-design.com/logo/blog/wp-content/uploads/2013/11/a.gif" alt="アーセナルFCロゴ" class="arsenal-logo">
+   
+            <h2>クラブの歴史</h2>
+            <h3>創設</h3>
+            <p>アーセナルは1886年に創設されました。当初は「ダイアル・スクエア」として知られ、後に「ロイヤル・アーセナル」となりました。</p>
+        
+            <h3>初期の成功</h3>
+            <p>1930年代にクラブは初の大きな成功を収め、数回のリーグ優勝とFAカップの勝利を達成しました。</p>
+        
+            <h3>無敗のシーズン</h3>
+            <p>2003-04シーズンは「インヴィンシブルズ」として知られ、アーセナルはプレミアリーグを無敗で制覇しました。</p>
+        
+            <h3>タイトルと栄光</h3>
+            <p>アーセナルはFAカップで最も成功したチームの一つであり、複数回の優勝を誇ります。また、リーグタイトルも複数回獲得しています。</p>
+        
+            <h3>エミレーツ・スタジアム</h3>
+            <p>2006年、アーセナルはハイベリースタジアムからエミレーツ・スタジアムに移転しました。</p>
+        
+            <h3>近年の挑戦</h3>
+            <p>アーセナルは国内外での大きなタイトルを獲得するために奮闘しています。</p>
+        
+            <h3>ファンベースと文化</h3>
+            <p>アーセナルは世界中に広がる熱狂的なファンベースを持ち、独特なプレースタイルとクラブ文化が特徴です。</p>
+        </div>
+        
+        <div class="manager">
+            <h2>監督</h2>
+            <p>現在の監督: [ミケル・アルテタ]</p>
+            <img src="https://www.soccer-king.jp/wp-content/uploads/2022/11/GettyImages-1244276509.jpg" alt="アーセナルFCの監督" class="manager-photo">
 
-<h1>プレミアリーグBIG6特集!!!</h1>
-<p>このサイトではプレミアリーグのBIG6と呼ばれるチームについての情報を提供します!!</p>
+            <div class="stadium-info">
+                <h2>スタジアム情報</h2>
+                <p>ホームスタジアム: エミレーツ・スタジアム</p>
+                <img src="https://cdn.getyourguide.com/img/tour/3a9dce078e0b2e38.jpeg/145.jpg" class="stadium-photo">
+            </div>
+        </div>
 
-<div id="map" style="height: 250px; width: 60%;"></div>
+        <div class="recent-news">
+            <h2>最新ニュース</h2>
+            <ul>
+                <li>冨安最大2/10まで離脱</li>
+                <li>トーマス・パーティとエミール・スミスロウが数週間の離脱</li>
+            </ul>
+        </div>
 
-<h2>プレミアリーグとは？</h2>
-<p>プレミアリーグとはイングランドの最上位に位置するリーグです! 1992年に設立され、そのレベルの高さから、世界中で非常に人気のあるリーグとなっています。</p>
+        <div class="upcoming-matches">
+            <h2>今後の試合予定</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>日付</th>
+                        <th>対戦相手</th>
+                        <th>大会</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for match in matches %}
+                    <tr>
+                        <td>{{ match.date }}</td>
+                        <td>{{ match.homeTeam }} vs {{ match.awayTeam }}</td>
+                        <td>{{ match.competition }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="current-standing">
+            <h2>現在の順位</h2>
+            <p>4位</p>
+        </div>
 
-<h2>BIG6とは?</h2>
-<p>BIG6とは下記の6クラブのことを指し、これらのクラブは、過去数シーズンにわたりプレミアリーグでの競争が激しく、国際大会でもタイトルを獲得しているクラブです。</p>
-
-<ul>
-    <li>マンチェスターシティ(Manchester City)</li>
-    <li>マンチェスターユナイテッド(Manchester United)</li>
-    <li>リヴァプール(Liverpool)</li>
-    <li>チェルシー(Chelsea)</li>
-    <li>アーセナル(Arsenal)</li>
-    <li>トッテナムホットスパー(Tottenham Hotspur)</li>
-</ul>
-
-<p>これら6チームの最新情報について随時発信していきます! それぞれのチームについての情報は下の名前検索から飛べます！</p>
-
-<form id="teamForm">
-    <label for="teamName">Enter the team name:</label>
-    <input type="text" id="teamName" name="teamName">
-    <input type="submit" value="Go to team page">
-</form>
-
-<!-- External scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<!--html文書内で外部のjavascriptを読み込むためのもの-->
-<!--jQuery:JavaScriptライブラリ　Ajax操作などを簡単にブラウザ間で行える-->
-<!--leaflet:JavaScriptライブラリ　地図をwebページに表示する-->
-<script src="script.js"></script>
+        <div class="positions">
+            <h2>以下からポジションごとの選手情報を確認できます</h2>
+            <ul>
+                <li><a href="/position/gk">GK (ゴールキーパー)</a></li>
+                <li><a href="/position/df">DF (ディフェンダー)</a></li>
+                <li><a href="/position/mf">MF (ミッドフィールダー)</a></li>
+                <li><a href="/position/fw">FW (フォワード)</a></li>
+            </ul>
+        </div>
 </body>
 </html>
+<footer>
+    <p>&copy; 2024 アーセナルFC. All rights reserved.</p>
+</footer>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
