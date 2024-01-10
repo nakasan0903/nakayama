@@ -2,6 +2,30 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h2>ログイン</h2>
+    <form action="/login" method="post">
+        <div>
+            <label for="username">ユーザー名:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" value="ログイン">
+    </form>
+    <p>初めてご利用ですか？<a href="/register">アカウント登録</a></p>
+</body>
+</html>
+
+=======
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログインページ</title>
     <style>
