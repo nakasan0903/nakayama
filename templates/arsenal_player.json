@@ -1,0 +1,132 @@
+{
+    "team": "Arsenal",
+    "players": [
+      {
+        "name": "ブカヨ・サカ",
+        "position": "フォワード",
+        "number": 7
+      },
+      {
+        "name": "ガブリエル・ジェズス",
+        "position": "フォワード",
+        "number": 9
+      },
+      {
+        "name": "ガブリエル・マルティネッリ",
+        "position": "フォワード",
+        "number": 11
+      },
+      {
+        "name": "エドワード・エンケティア",
+        "position": "フォワード",
+        "number": 14
+      },
+      {
+        "name": "レアンドロ・トロサール",
+        "position": "フォワード",
+        "number": 19
+      },
+       { 
+      "name": "トーマス・パーテイ",
+        "position": "ミッドフィールダー",
+        "number": 5
+      },
+      {
+      "name": "マルティン・ウーデゴール",
+      "position": "ミッドフィールダー",
+      "number": 8
+      },
+      {
+        "name": "エミール・スミス・ロウ",
+        "position": "ミッドフィールダー",
+        "number": 10
+      },
+      {
+        "name": "ジョルジーニョ",
+        "position": "ミッドフィールダー",
+        "number": 20
+      },
+      {
+        "name": "ファビオ・ヴィエイラ",
+        "position": "ミッドフィールダー",
+        "number": 21
+      },
+      {
+        "name": "リース・ネルソン",
+        "position": "ミッドフィールダー",
+        "number": 24
+      },
+      {
+        "name": "モハメド・エルネニー",
+        "position": "ミッドフィールダー",
+        "number": 25
+      },
+      {
+        "name": "カイ・ハヴァーツ",
+        "position": "ミッドフィールダー",
+        "number": 29
+      },
+      {
+        "name": "デクラン・ライス",
+        "position": "ミッドフィールダー",
+        "number": 41
+      },
+      {
+        "name": "イーサン・ヌワネリ",
+        "position": "ミッドフィールダー",
+        "number": 63
+      },
+      {
+        "name": "ウィリアン・サリバ",
+        "position": "ディフェンダー",
+        "number": 2
+      },
+      {
+        "name": "ベン・ホワイト",
+        "position": "ディフェンダー",
+        "number": 4
+      },
+      {
+        "name": "ガブリエウ・マガリャンイス",
+        "position": "ディフェンダー",
+        "number": 2
+      },
+      {
+        "name": "ユリエン・ティンバー",
+        "position": "ディフェンダー",
+        "number": 12
+      },
+      {
+        "name": "ヤクブ・キヴィオル",
+        "position": "ディフェンダー",
+        "number": 15
+      },
+      {
+        "name": "セドリック・ソアレス",
+        "position": "ディフェンダー",
+        "number": 17
+      },
+      {
+        "name": "冨安 健洋",
+        "position": "ディフェンダー",
+        "number": 18
+      },
+      {
+        "name": "オレクサンドル・ジンチェンコ",
+        "position": "ディフェンダー",
+        "number": 35
+      },
+      {
+        "name": "アーロン・ラムズデール",
+        "position": "ゴールキーパー",
+        "number": 1
+      },
+      {
+        "name": "ダビド・ラヤ",
+        "position": "ゴールキーパー",
+        "number": 22
+      }
+
+    ]
+  }
+  
